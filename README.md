@@ -28,6 +28,10 @@ user@foo:~$ pip install --upgrade memoizelabs
   * **isolated_voice_path** _(str)_: A path to an .mp3 file containing a clean recording of the target at least 30 seconds in length, used to pre-process submitted files and identify the target's voice within them before finetuning for better results. 
   * **description** _(str, optional)_: A description of the target (ex: An elderly woman with a deep, soothing voice, a British accent, and a witty sense of humor).
 
+```StateMachine.init()```
+
+```StateMachine.close()```
+
 ```StateMachine.get_state()```
 * Returns:
   * The current state of the state machine, one of ```INIT```, ```PRE-OP```, ```OPERATIONAL```, or ```FAULT```.
@@ -36,6 +40,9 @@ user@foo:~$ pip install --upgrade memoizelabs
 * Returns:
   * Array of errors of type str.
 
+```StateMachine.transition_state(new_state)```
+* Parameters:
+  * **new_state** _(StateMachine state)_: The user-requested state for the state machine, one of ```StateMachine.INIT```, ```StateMachine.PRE-OP```, or ```StateMachine.OPERATIONAL```.
 
 ### Classes
 
