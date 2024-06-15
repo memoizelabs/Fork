@@ -25,7 +25,7 @@ foo@user:~$ pip install --upgrade memoizelabs
 
 ```StateMachine.get_state()```
 * Returns:
-  * The current state of the state machine, one of INIT, PRE-OP, OPERATIONAL, or FAULT.
+  * The current state of the state machine, one of ```INIT```, ```PRE-OP```, ```OPERATIONAL```, or ```FAULT```.
 
 ```StateMachine.get_errors()```
 * Returns:
