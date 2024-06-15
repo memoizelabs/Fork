@@ -10,11 +10,11 @@ For real-time interaction with models, we define a state machine that allows for
 ## Installation
 For first-time users, begin by running:
 ```console 
-foo@user:~$ pip install memoizelabs
+user@foo:~$ pip install memoizelabs
 ``` 
 For upgrading to the latest version, upgrade to the latest version by running:
 ```console 
-foo@user:~$ pip install --upgrade memoizelabs
+user@foo:~$ pip install --upgrade memoizelabs
 ```
 
 ## Usage
