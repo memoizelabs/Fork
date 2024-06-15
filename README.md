@@ -28,7 +28,7 @@ For first-time users, begin by running:
 ```console 
 user@foo:~$ pip install memoizelabs
 ``` 
-For upgrading to the latest version, upgrade to the latest version by running:
+Upgrade to the latest version by running:
 ```console 
 user@foo:~$ pip install --upgrade memoizelabs
 ```
