@@ -19,34 +19,9 @@ user@foo:~$ pip install --upgrade memoizelabs
 
 ## Usage
 
-### Methods
-
-```Fork.fork(id, file_paths, isolated_voice_path, description='')```
-* Parameters:
-  * **id** _(str)_: The user-specified ID of the model. 
-  * **file_paths** _(str array)_: A string of file paths containing objects to fine tune on. These can be .txt, .mp3, or .mp4 files, and will be transcribed as necessary and tokenized on the backend. 
-  * **isolated_voice_path** _(str)_: A path to an .mp3 file containing a clean recording of the target at least 30 seconds in length, used to pre-process submitted files and identify the target's voice within them before finetuning for better results. 
-  * **description** _(str, optional)_: A description of the target (ex: An elderly woman with a deep, soothing voice, a British accent, and a witty sense of humor).
-
-```StateMachine.init()```
-
-```StateMachine.close()```
-
-```StateMachine.get_state()```
-* Returns:
-  * The current state of the state machine, one of ```INIT```, ```PRE-OP```, ```OPERATIONAL```, or ```FAULT```.
-
-```StateMachine.get_errors()```
-* Returns:
-  * Array of errors of type str.
-
-```StateMachine.transition_state(new_state)```
-* Parameters:
-  * **new_state** _(StateMachine state)_: The user-requested state for the state machine, one of ```StateMachine.INIT```, ```StateMachine.PRE-OP```, or ```StateMachine.OPERATIONAL```.
-
 ### Classes
 
-```Fork(api_key)``` 
+```Fork(api_key)```: Initialize the Fork class, which contains all applicable methods and subclasses within the API. 
 * Parameters:
   * **api_key** _(str)_: Your Memoize Labs Fork API key. Get one at memoizelabs.com/fork.
 
@@ -77,3 +52,30 @@ graph TD
     OPERATIONAL --> PRE_OP
     OPERATIONAL --> OPERATIONAL
 ```
+
+### Methods
+
+```Fork.fork(id, file_paths, isolated_voice_path, description='')```: Pass in necessary data for pre-processing and to be placed in a queue for training. 
+* Parameters:
+  * **id** _(str)_: The user-specified ID of the model. 
+  * **file_paths** _(str array)_: A string of file paths containing objects to fine tune on. These can be .txt, .mp3, or .mp4 files, and will be transcribed as necessary and tokenized on the backend. 
+  * **isolated_voice_path** _(str)_: A path to an .mp3 file containing a clean recording of the target at least 30 seconds in length, used to pre-process submitted files and identify the target's voice within them before finetuning for better results. 
+  * **description** _(str, optional)_: A description of the target (ex: An elderly woman with a deep, soothing voice, a British accent, and a witty sense of humor).
+
+```StateMachine.init()```: Initialize the live inference state machine to the ```INIT``` state.
+
+```StateMachine.close()```: Transition the live inference state machine to the ```INIT``` state, clean up resources, and exit. 
+
+```StateMachine.get_state()```: Get the current state of the live inference state machine. 
+* Returns:
+  * The current state of the state machine, one of ```INIT```, ```PRE-OP```, ```OPERATIONAL```, or ```FAULT```.
+
+```StateMachine.get_errors()```: Get the set of current errors of the live inference state machine. The returned array should be empty unless the machine is in ```FAULT``` state. 
+* Returns:
+  * Array of errors of type str.
+
+```StateMachine.transition_state(new_state)```: Transition the state machine from the current state to the requested state. 
+* Parameters:
+  * **new_state** _(StateMachine state)_: The user-requested state for the state machine, one of ```StateMachine.INIT```, ```StateMachine.PRE-OP```, or ```StateMachine.OPERATIONAL```.
+
+
