@@ -46,9 +46,9 @@ foo@user:~$ pip install --upgrade memoizelabs
   * FAULT: the fault state of the state machine. Once the causal errors are resolved, the user must transition the state machine back to INIT state by calling ```StateMachine.transition_state(INIT)``` and initialization checks will be re-run.
  
 * **Legal State Transitions:**
-##### Explanation:
 1. **States and Transitions**: Each state (INIT, PRE_OP, FAULT, OPERATIONAL) is represented as a node, and the arrows (`-->`) represent the transitions between the states.
 2. **Loops**: Transitions where the state remains the same (e.g., `INIT --> INIT`) are included as loops.
+3. **Invalid State Transitions**: Invalid transitions result in the state machine transitioning to a ```FAULT``` state, from which it can be recovered back to the ```INIT``` state. 
 
 ```mermaid
 graph TD
