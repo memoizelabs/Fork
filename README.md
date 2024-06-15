@@ -43,4 +43,19 @@ foo@user:~$ pip install --upgrade memoizelabs
   * INIT: the initialization state of the state machine. The state machine performs initial checks to confirm access to an audio device and wi-fi, then transitions to PRE-OP if checks pass or FAULT if an issue is detected.
   * PRE-OP: the state machine is ready to begin live streaming of data upon command. 
   * OPERATIONAL: the state machine is connected and exchanging live streams with the server. 
-  * FAULT: the fault state of the state machine. Once the causal errors are resolved, the user must transition the state machine back to INIT state by calling ```StateMachine.transition_state(INIT)``` and initialization checks will be re-run. 
+  * FAULT: the fault state of the state machine. Once the causal errors are resolved, the user must transition the state machine back to INIT state by calling ```StateMachine.transition_state(INIT)``` and initialization checks will be re-run.
+ 
+* **Legal State Transitions:**
+```mermaid
+graph TD
+    INIT --> PRE_OP
+    INIT --> FAULT
+    INIT --> INIT
+    PRE_OP --> OPERATIONAL
+    PRE_OP --> INIT
+    PRE_OP --> PRE_OP
+    FAULT --> INIT
+    FAULT --> FAULT
+    OPERATIONAL --> PRE_OP
+    OPERATIONAL --> OPERATIONAL
+```
