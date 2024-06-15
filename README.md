@@ -63,7 +63,6 @@ graph TD
     PRE_OP --> INIT
     PRE_OP --> PRE_OP
     FAULT --> INIT
-    FAULT --> FAULT
     OPERATIONAL --> PRE_OP
     OPERATIONAL --> OPERATIONAL
 ```
