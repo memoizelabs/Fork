@@ -9,8 +9,8 @@ For real-time interaction with models, we define a state machine that allows for
 
 ## Contents
 
-1. [Installation](#installation)
-2. [Usage](#usage)
+1. [Installation](#Installation)
+2. [Usage](#Usage)
    1. [Classes](#classes)
       1. [Fork()](#fork)
       2. [Fork.StateMachine()](#forkstatemachine)
