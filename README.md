@@ -11,3 +11,7 @@ foo@user:~$ pip install --upgrade memoizelabs
 ```
 
 ### Usage
+
+#### Methods
+
+#### Classes
