@@ -14,9 +14,10 @@ foo@user:~$ pip install --upgrade memoizelabs
 
 ### Methods
 
-```fork(id, description='')```
+```fork(id, file_paths, description='')```
 * **Parameters:**
   * **id** _(str)_:
+  * **file_paths** _(str array)_: 
   * **description** _(str)_:
 
 
