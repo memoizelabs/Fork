@@ -9,3 +9,5 @@ For upgrading to the latest version, upgrade to the latest version by running:
 ```console 
 foo@user:~$ pip install --upgrade memoizelabs
 ```
+
+### Usage
