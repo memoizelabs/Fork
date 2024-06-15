@@ -15,9 +15,15 @@ foo@user:~$ pip install --upgrade memoizelabs
 ### Methods
 
 ```fork(id, description='')```
+* **Parameters:**
+  * **id** _(str)_:
+  * **description** _(str)_:
+
 
 ### Classes
 
-```Fork()```
+```Fork(api_key)```
+* **Parameters:**
+  * **api_key** _(str)_:
 
 ```StateMachine() ```
