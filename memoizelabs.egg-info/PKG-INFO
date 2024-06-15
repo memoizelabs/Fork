@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: memoizelabs
-Version: 0.0.1.1
+Version: 0.0.1.2
 Summary: Fork, Memoize Labs' API for training and using human-like models.
 Author-email: Julius Arolovitch <julius@memoizelabs.com>, Maxim Yagnyatinskiy <max@memoizelabs.com>, Robert Devenyi <rob@memoizelabs.com>, Eden Brunner <eden@memoizelabs.com>
 Project-URL: homepage, https://memoizelabs.com
@@ -10,7 +10,7 @@ License-File: LICENSE
 Requires-Dist: requests>=2.25.1
 Requires-Dist: pyaudio>=0.2.11
 
-# Fork, by Memoize Labs (V0.0.1.1)
+# Fork, by Memoize Labs (V0.0.1.2)
 
 **_Report bugs and get support at contact@memoizelabs.com_**
 

@@ -120,7 +120,7 @@ class Fork:
 
         def transition_state(self, new_state):
             valid_transitions = {
-                self.INIT: [self.PRE_OP, self.INIT],
+                self.INIT: [self.PRE_OP, self.INIT, self.FAULT],
                 self.PRE_OP: [self.OPERATIONAL, self.INIT, self.PRE_OP],
                 self.FAULT: [self.INIT, self.FAULT],
                 self.OPERATIONAL: [self.PRE_OP, self.OPERATIONAL]

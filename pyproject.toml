@@ -6,7 +6,7 @@ authors = [
     {name = "Robert Devenyi", email = "rob@memoizelabs.com"},
     {name = "Eden Brunner", email = "eden@memoizelabs.com"},
 ]
-version = "0.0.1.1"  
+version = "0.0.1.2"  
 description = "Fork, Memoize Labs' API for training and using human-like models."
 readme = "README.md"
 dependencies = [
