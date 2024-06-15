@@ -16,11 +16,16 @@ foo@user:~$ pip install --upgrade memoizelabs
 
 ### Methods
 
+<<<<<<< HEAD
 ```Fork.fork(id, file_paths, isolated_voice_path, description='')```
+=======
+```fork(id, file_paths, isolated_voice_path, description='')```
+>>>>>>> 5cf65d6aec4f0e512679c2942840094d9bdc2919
 * **Parameters:**
   * **id** _(str)_: the user-specified ID of the model. 
   * **file_paths** _(str array)_: a string of file paths containing objects to fine tune on. These can be .txt, .mp3, or .mp4 files. 
   * **isolated_voice_path** _(str)_: a path to a .mp3 file containing a clean recording of the target at least 30 seconds in length, used to pre-process submitted files and identify the target's voice within them before finetuning for better results. 
+<<<<<<< HEAD
   * **description** _(str, optional)_: a description of the target (ex: An elderly woman with a deep, soothing voice, a British accent, and a witty sense of humor).
 
 ```StateMachine.state()```
@@ -30,10 +35,14 @@ foo@user:~$ pip install --upgrade memoizelabs
 ```StateMachine.errors()```
 * Returns:
   * Array of errors 
+=======
+  * **description** _(str, optional)_: a description of the target (ex: An elderly woman with a deep, soothing voice, a British accent, and a witty sense of humor). 
+>>>>>>> 5cf65d6aec4f0e512679c2942840094d9bdc2919
 
 
 ### Classes
 
+<<<<<<< HEAD
 ```Fork(api_key)``` 
 * **Parameters:**
   * **api_key** _(str)_: your Memoize Labs Fork API key. Get one at memoizelabs.com/fork
@@ -44,3 +53,10 @@ foo@user:~$ pip install --upgrade memoizelabs
  * PRE-OP: the state machine is ready to begin live streaming of data upon command. 
  * OPERATIONAL: the state machine is connected and exchanging live streams with the server. 
  * FAULT: the fault state of the state machine. Once the causal errors are resolved, the user must transition the state machine back to INIT state by calling ```StateMachine.transition_state(INIT)``` and initialization checks will be re-run. 
+=======
+```Fork(api_key)```
+* **Parameters:**
+  * **api_key** _(str)_:
+
+```StateMachine() ```
+>>>>>>> 5cf65d6aec4f0e512679c2942840094d9bdc2919
