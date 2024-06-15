@@ -23,7 +23,7 @@ For real-time interaction with models, we define a state machine that allows for
       6. [Fork.StateMachine.transition_state()](#forkstatemachinetransition_state)
 
 
-## Installation
+## 1. Installation
 For first-time users, begin by running:
 ```console 
 user@foo:~$ pip install memoizelabs
@@ -33,7 +33,7 @@ For upgrading to the latest version, upgrade to the latest version by running:
 user@foo:~$ pip install --upgrade memoizelabs
 ```
 
-## Usage
+## 2. Usage
 
 ### Classes
 
