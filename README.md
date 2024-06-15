@@ -14,10 +14,10 @@ foo@user:~$ pip install --upgrade memoizelabs
 
 ### Methods
 
-```console fork(id, description='')```
+```fork(id, description='')```
 
 ### Classes
 
-```console Fork()```
+```Fork()```
 
-```console StateMachine() ```
+```StateMachine() ```
