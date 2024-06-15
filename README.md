@@ -14,4 +14,9 @@ foo@user:~$ pip install --upgrade memoizelabs
 
 ### Methods
 
+```console fork(id, description='')```
+
 ### Classes
+
+```console Fork()```
+```console StateMachine() ```
