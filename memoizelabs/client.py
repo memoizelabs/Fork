@@ -10,6 +10,7 @@ class Fork:
     def __init__(self, api_key, base_url='http://3.93.16.238:5000'):
         self.api_key = api_key
         self.base_url = base_url
+        self.state_machine = self.StateMachine()
 
     def fork(self, file_paths, voice_name, voice_description=''):
         url = f"{self.base_url}/process"
@@ -43,3 +44,23 @@ class Fork:
         except requests.exceptions.RequestException as e:
             logger.error("Request failed: %s", str(e))
             return None
+
+    class StateMachine:
+        INIT = 'INIT'
+        PRE_OP = 'PRE-OP'
+        FAULT = 'FAULT'
+        OPERATIONAL = 'OPERATIONAL'
+
+        def __init__(self):
+            self.current_state = self.INIT
+            logger.info("State machine initialized in state: %s",
+                        self.current_state)
+
+        def change_state(self, new_state):
+            if new_state in [self.INIT, self.PRE_OP, self.FAULT, self.OPERATIONAL]:
+                logger.info("Changing state from %s to %s",
+                            self.current_state, new_state)
+                self.current_state = new_state
+                logger.info("State changed to %s", self.current_state)
+            else:
+                logger.error("Invalid state: %s", new_state)
