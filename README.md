@@ -24,6 +24,7 @@ For real-time interaction with models, we define a state machine that allows for
 
 
 
+
 ## 1. Installation
 For first-time users, begin by running:
 ```console 
