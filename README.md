@@ -9,18 +9,19 @@ For real-time interaction with models, we define a state machine that allows for
 
 ## Contents
 
-1 Installation
-2 Usage
-  2.1 Classes
-     2.1.1 Fork()
-     2.1.2 Fork.StateMachine()
-  2.2 Methods
-     2.2.1 Fork.fork()
-     2.2.2 Fork.StateMachine.init()
-     2.2.3 Fork.StateMachine.close()
-     2.2.4 Fork.StateMachine.get_state()
-     2.2.5 Fork.StateMachine.get_errors()
-     2.2.6 Fork.StateMachine.transition_state()
+1. [Installation](#installation)
+2. [Usage](#usage)
+   1. [Classes](#classes)
+      1. [Fork()](#fork)
+      2. [Fork.StateMachine()](#forkstatemachine)
+   2. [Methods](#methods)
+      1. [Fork.fork()](#forkfork)
+      2. [Fork.StateMachine.init()](#forkstatemachineinit)
+      3. [Fork.StateMachine.close()](#forkstatemachineclose)
+      4. [Fork.StateMachine.get_state()](#forkstatemachineget_state)
+      5. [Fork.StateMachine.get_errors()](#forkstatemachineget_errors)
+      6. [Fork.StateMachine.transition_state()](#forkstatemachinetransition_state)
+
 
 ## Installation
 For first-time users, begin by running:
