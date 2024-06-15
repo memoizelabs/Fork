@@ -1,5 +1,7 @@
 # Fork, by Memoize Labs (V0.0.1)
 
+**_Report bugs and get support at contact@memoizelabs.com_**
+
 ## Installation
 For first-time users, begin by running:
 ```console 
@@ -16,7 +18,7 @@ foo@user:~$ pip install --upgrade memoizelabs
 
 ```fork(id, file_paths, description='')```
 * **Parameters:**
-  * **id** _(str)_:
+  * **id** _(str)_: the user-specified ID of the model
   * **file_paths** _(str array)_: 
   * **description** _(str)_:
 
