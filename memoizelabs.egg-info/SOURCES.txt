@@ -8,3 +8,4 @@ memoizelabs.egg-info/SOURCES.txt
 memoizelabs.egg-info/dependency_links.txt
 memoizelabs.egg-info/requires.txt
 memoizelabs.egg-info/top_level.txt
+tests/tests.py
