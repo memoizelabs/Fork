@@ -22,7 +22,7 @@ user@foo:~$ pip install --upgrade memoizelabs
 ### Methods
 
 ```Fork.fork(id, file_paths, isolated_voice_path, description='')```
-* **Parameters:**
+* Parameters:
   * **id** _(str)_: The user-specified ID of the model. 
   * **file_paths** _(str array)_: A string of file paths containing objects to fine tune on. These can be .txt, .mp3, or .mp4 files, and will be transcribed as necessary and tokenized on the backend. 
   * **isolated_voice_path** _(str)_: A path to an .mp3 file containing a clean recording of the target at least 30 seconds in length, used to pre-process submitted files and identify the target's voice within them before finetuning for better results. 
@@ -40,7 +40,7 @@ user@foo:~$ pip install --upgrade memoizelabs
 ### Classes
 
 ```Fork(api_key)``` 
-* **Parameters:**
+* Parameters:
   * **api_key** _(str)_: Your Memoize Labs Fork API key. Get one at memoizelabs.com/fork.
 
 ```StateMachine() ``` : A state machine for using real time interactive features with low latency and continous connection to the server.
