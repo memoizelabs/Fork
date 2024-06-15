@@ -2,6 +2,11 @@
 
 **_Report bugs and get support at contact@memoizelabs.com_**
 
+## Introduction
+
+This documentation defines usage of Memoize Labs' Fork API, an interface to train and use human-like models. 
+For real-time interaction with models, we define a state machine that allows for state transitions and ultimately data streaming while handling server-side and client-side faults. 
+
 ## Installation
 For first-time users, begin by running:
 ```console 
