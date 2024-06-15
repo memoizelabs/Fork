@@ -47,7 +47,7 @@ foo@user:~$ pip install --upgrade memoizelabs
 * **States:**
   * ```StateMachine.INIT (INIT)```: the initialization state of the state machine. The state machine performs initial checks to confirm access to an audio device and wi-fi, then transitions to ```PRE_OP``` if checks pass or ```FAULT``` if an issue is detected. The initialization state checks for:
     * A valid Memoize Labs API key
-    * A wi-fi connection
+    * A Wi-Fi connection
     * An input audio device
     * An output audio device
   * ```StateMachine.PRE_OP (PRE_OP)```: the state machine is ready to begin live streaming of data upon command. 
