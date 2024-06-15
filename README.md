@@ -45,10 +45,10 @@ foo@user:~$ pip install --upgrade memoizelabs
 
 ```StateMachine() ``` : A state machine for using real time interactive features with low latency and continous connection to the server.
 * **States:**
-  * ```INIT```: the initialization state of the state machine. The state machine performs initial checks to confirm access to an audio device and wi-fi, then transitions to ```PRE-OP``` if checks pass or ```FAULT``` if an issue is detected.
-  * ```PRE-OP```: the state machine is ready to begin live streaming of data upon command. 
-  * ```OPERATIONAL```: the state machine is connected and exchanging live streams with the server. 
-  * ```FAULT```: the fault state of the state machine. Once the causal errors are resolved, the user must transition the state machine back to INIT state by calling ```StateMachine.transition_state(INIT)``` and initialization checks will be re-run.
+  * ```StateMachine.INIT (INIT)```: the initialization state of the state machine. The state machine performs initial checks to confirm access to an audio device and wi-fi, then transitions to ```PRE_OP``` if checks pass or ```FAULT``` if an issue is detected.
+  * ```StateMachine.PRE_OP (PRE_OP)```: the state machine is ready to begin live streaming of data upon command. 
+  * ```StateMachine.OPERATIONAL (OPERATIONAL)```: the state machine is connected and exchanging live streams with the server. 
+  * ```FAULT```: the fault state of the state machine. Once the causal errors are resolved, the user must transition the state machine back to INIT state by calling ```StateMachine.transition_state(StateMachine.INIT)``` and initialization checks will be re-run.
  
 * **Legal State Transitions:**
   * **States and Transitions**: Each state (```INIT```, ```PRE_OP```, ```FAULT```, ```OPERATIONAL```) is represented as a node, and the arrows (`-->`) represent legal and user-commandable transitions between the states.
