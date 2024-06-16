@@ -32,7 +32,7 @@ user@foo:~$ sudo apt-get install portaudio19-dev
 ```
 **Mac:**
 ```console
-user@foo:~$ brew install PyAudio
+user@foo:~$ brew install portaudio
 ```
 **Then run:**
 ```console
