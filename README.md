@@ -26,19 +26,19 @@ For real-time interaction with models, we define a state machine that allows for
 ## 1. Installation
 For first-time users, begin by installing PortAudio if using Mac or Linux:
 
-Linux:
+**Linux:**
 ```console
 user@foo:~$ sudo apt-get install portaudio19-dev
 ```
-Mac:
+**Mac:**
 ```console
 user@foo:~$ brew install PyAudio
 ```
-Then run:
+**Then run:**
 ```console
 user@foo:~$ pip install memoizelabs
 ``` 
-Upgrade to the latest version by running:
+**Upgrade to the latest version by running:**
 ```console 
 user@foo:~$ pip install --upgrade memoizelabs
 ```
